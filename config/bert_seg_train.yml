@@ -1,0 +1,13 @@
+save: False 
+seed: 4321
+batch_size: 24
+n_epochs: 2
+learning_rate: 1e-5
+
+model: 'dbmdz/bert-base-italian-xxl-uncased'
+#'xlm-roberta-large'
+#'m-polignano-uniba/bert_uncased_L-12_H-768_A-12_italian_alb3rt0'
+#'dbmdz/bert-base-italian-xxl-uncased'
+#'bert-base-multilingual-cased'
+
+loss_weights: [1,1]

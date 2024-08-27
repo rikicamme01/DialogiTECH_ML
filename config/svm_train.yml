@@ -1,0 +1,18 @@
+embeddings_method: 'cls_last_hidden_state'
+# last_hidden_state_average
+# last_hidden_state_concat
+# four_last_hidden_state_concat
+# four_last_hidden_state_sum
+param_grid : {'C': [0.1, 0.5, 1, 10],
+              'gamma': ['scale', 1, 0.1, 0.01],
+              'degree': [3, 4, 5],
+              'kernel': ['rbf','poly']}
+
+scorer: { 'score_func' : f1_score,
+           'average': 'macro'}
+# (f1_score, average='macro') 
+# (f1_score, pos_label=1)
+task: ['irony', 'subjectivity', 'polarity']
+# ['irony', 'subjectivity', 'polarity']
+
+seed: 4321
