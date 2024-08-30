@@ -76,7 +76,6 @@ run["confusion_matrix"].upload(neptune.types.File.as_image(cm))
 fig = plot_loss(history['train_loss'], history['val_loss'])
 run["loss_plot"].upload(neptune.types.File.as_image(fig))
 
-
 #%%
 #hf_token = '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' # token modello Michele
 hf_token = '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'
