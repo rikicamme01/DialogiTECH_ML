@@ -37,8 +37,8 @@ print(f"config file loaded and save is[{config['save']}]")
 #%%
 seed_everything(config['seed'])
 
-df = pd.read_excel(script_dir + '/data/classifier/dataset_finale_train.xlsx', na_filter=False)
-test_df = pd.read_csv(script_dir + '/data/classifier/hyperion_test.csv', na_filter=False)
+df = pd.read_excel(script_dir + '/data/classifier/dataset_train.xlsx', na_filter=False)
+test_df = pd.read_excel(script_dir + '/data/classifier/dataset_test.xlsx', na_filter=False)
 
 run['config'] = config
 
