@@ -10,11 +10,11 @@ from ast import literal_eval
 from datasetss.ie_hyperion_dataset import find_word_bounds, clean_text
 
 
-df = pd.read_csv('../../data/processed/pipeline/test/ie_hyperion.csv', converters={'Stralci': literal_eval, 'Repertori': literal_eval})
+df = pd.read_excel('../../data/test/dataset_DialogiTECH_test.xlsx', converters={'Stralci': literal_eval, 'Repertori': literal_eval})
 #df = df.head(50)
-df['Testo'] = df['Testo'].map(clean_text)
-df['Stralci'] = df['Stralci'].map(lambda x: [clean_text(s) for s in x])
-df['Bounds'] = df.apply(lambda x: find_word_bounds(x['Stralci'], x['Testo']), axis=1).values.tolist()
+df['Testo'] = df['TESTO'].map(clean_text)
+#df['Stralci'] = df['Stralci'].map(lambda x: [clean_text(s) for s in x])
+#df['Bounds'] = df.apply(lambda x: find_word_bounds(x['Stralci'], x['Testo']), axis=1).values.tolist()
 
 # %%
 def intersection(A, B):
@@ -141,7 +141,7 @@ print(df['Norm_IoU'].mean())
 # %% TEST ANALYZER
 from analyzer import Analyzer
 analyzer = Analyzer()
-path = "/Users/riccardo/VSCode/DialogiTECH/src/scripts/Example_output2.xlsx"
+path = "../../data/test/dataset_DialogiTECH_test.xlsx"
 
 analyzer.predict(path)
 # %%
