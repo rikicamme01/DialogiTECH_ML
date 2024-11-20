@@ -145,7 +145,7 @@ class Analyzer():
                 sorted_dict = sorted(dizio.items(), key=lambda item: item[1], reverse = True)
                 dizio = dict(sorted_dict[:5])
                 for key, value in dizio.items():
-                    dizio[key] = round(value*100)
+                    dizio[key] = round(value * 100, 2 - int(f"{value * 100:.0e}".split('e')[1]))
 
                 list_dict_sorted.append(dizio)
                 list_first_rep.append(next(iter(dizio)))

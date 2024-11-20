@@ -138,7 +138,7 @@ print(df['Norm_precision'].mean())
 print(df['Norm_recall'].mean())
 print(df['Norm_f1'].mean())
 print(df['Norm_IoU'].mean())
-# %% TEST ANALYZER
+#%% TEST ANALYZER
 from analyzer import Analyzer
 analyzer = Analyzer()
 path = "../../data/test/dataset_DialogiTECH_test.xlsx"
